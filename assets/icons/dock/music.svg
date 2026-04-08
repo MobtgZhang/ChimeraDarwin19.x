@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <!-- Music icon - Note -->
+  <ellipse cx="4" cy="12" rx="2.5" ry="2" fill="#9B59B6"/>
+  <rect x="6" y="3" width="1.5" height="9" fill="#9B59B6"/>
+  <ellipse cx="10" cy="6" rx="2" ry="1.5" fill="#9B59B6"/>
+  <rect x="11.5" y="4" width="1" height="5" fill="#9B59B6"/>
+  <path d="M7.5 3 Q8 2 9.5 4.5" stroke="#9B59B6" stroke-width="1.5" fill="none"/>
+</svg>

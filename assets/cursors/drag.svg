@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <!-- Drag cursor - arrow with plus -->
+  <polygon points="4,4 4,26 10,20 15,28 19,26 14,18 22,18" fill="#333333" stroke="white" stroke-width="1"/>
+  <line x1="26" y1="2" x2="30" y2="6" stroke="#333333" stroke-width="1.5"/>
+  <line x1="30" y1="2" x2="26" y2="6" stroke="#333333" stroke-width="1.5"/>
+  <line x1="28" y1="2" x2="28" y2="6" stroke="#333333" stroke-width="1.5"/>
+</svg>

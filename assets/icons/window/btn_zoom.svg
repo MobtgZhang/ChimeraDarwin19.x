@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8">
+  <!-- Zoom button - green circle with expand -->
+  <circle cx="4" cy="4" r="3.5" fill="#28C840"/>
+  <rect x="2.5" y="2.5" width="3" height="3" fill="none" stroke="white" stroke-width="0.8"/>
+  <line x1="4" y1="1" x2="4" y2="2" stroke="white" stroke-width="0.6"/>
+  <line x1="4" y1="6" x2="4" y2="7" stroke="white" stroke-width="0.6"/>
+  <line x1="1" y1="4" x2="2" y2="4" stroke="white" stroke-width="0.6"/>
+  <line x1="6" y1="4" x2="7" y2="4" stroke="white" stroke-width="0.6"/>
+</svg>

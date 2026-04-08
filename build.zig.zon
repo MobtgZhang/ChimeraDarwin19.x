@@ -1,0 +1,14 @@
+.{
+    .name = .ChimeraOS,
+    .version = "0.1.0",
+    .fingerprint = 0xf42ee76946499fce,
+    .minimum_zig_version = "0.15.2",
+    .dependencies = .{},
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+        "scripts",
+        "docs",
+    },
+}

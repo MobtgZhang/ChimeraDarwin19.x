@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <!-- Edit pencil menu icon -->
+  <rect x="3" y="2" width="9" height="12" rx="1" fill="#ECF0F1" stroke="#BDC3C7" stroke-width="0.5"/>
+  <rect x="9" y="4" width="5" height="3" fill="#E67E22" transform="rotate(45 11 5)"/>
+  <polygon points="11,12 9,14 7,12 9,10" fill="#F39C12"/>
+  <polygon points="11,12 9,10 13,10" fill="#333333"/>
+</svg>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <!-- Editor icon - Pencil -->
+  <rect x="2" y="3" width="10" height="12" rx="1" fill="#E8B84A" transform="rotate(-30 8 8)"/>
+  <polygon points="11,2 13,0 15,2" fill="#333333" transform="rotate(-30 8 8)"/>
+  <rect x="6" y="11" width="4" height="2" fill="#333333" transform="rotate(-30 8 8)"/>
+</svg>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8">
+  <!-- Notification Icon - 通知 -->
+  <path d="M4 1 L7 2.5 L7 5 Q7 6.5 4 7 Q1 6.5 1 5 L1 2.5 Z" fill="none" stroke="#333" stroke-width="0.8"/>
+  <circle cx="4" cy="4.5" r="0.8" fill="#333"/>
+  <line x1="4" y1="5.5" x2="4" y2="6" stroke="#333" stroke-width="0.8"/>
+</svg>

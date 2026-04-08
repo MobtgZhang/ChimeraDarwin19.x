@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8">
+  <!-- Battery Icon - 危急电量 -->
+  <rect x="1" y="2" width="6" height="4" rx="0.5" fill="none" stroke="#E74C3C" stroke-width="0.8"/>
+  <rect x="7" y="3.5" width="0.8" height="1" fill="#333"/>
+  <rect x="1.5" y="2.5" width="0.5" height="2.5" fill="#E74C3C"/>
+  <text x="4" y="4.5" text-anchor="middle" font-size="3" fill="#E74C3C">!</text>
+</svg>

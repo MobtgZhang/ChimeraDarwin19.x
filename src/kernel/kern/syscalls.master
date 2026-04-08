@@ -1,0 +1,327 @@
+; Darwin 19.x System Call Master Definition
+; 参考 xnu/bsd/kern/syscalls.master
+; 这个文件定义了 Darwin 19.x 的所有系统调用
+
+; 格式: syscall_name [kernel_handler] [arg1_type] [arg2_type] ...
+; 类型: A=address, I=int, U=uint, V=void, P=port, S=string
+
+; === Mach System Calls (0-199) ===
+
+; Mach IPC
+mach_msg_trap		mach_msg_trap			A I I I I I
+mach_msg			mach_msg			A I I I I I I
+mach_ports_lookup		mach_ports_lookup		A
+task_for_pid			task_for_pid			I A
+task_self			task_self			A
+task_set_info			task_set_info			I I I A I
+task_get_info			task_get_info			I I I A I
+task_set_exception_ports		task_set_exception_ports	I I I I I
+task_get_exception_ports		task_get_exception_ports	I I I I I
+task_suspend			task_suspend			I
+task_resume			task_resume			I
+task_terminate			task_terminate			I
+thread_self_trap			thread_self_trap			A
+thread_get_port			thread_get_port			I A
+thread_set_state		thread_set_state		I I A I
+thread_get_state		thread_get_state		I I A I
+thread_suspend			thread_suspend			I
+thread_resume			thread_resume			I
+thread_terminate		thread_terminate		I
+thread_abort_safely		thread_abort_safely		I
+thread_abort			thread_abort			I
+thread_switch			thread_switch			I I I
+thread_get_state		thread_get_state		I I A I
+
+; Virtual Memory
+vm_allocate			vm_allocate			I A I I
+vm_deallocate			vm_deallocate			I I I
+vm_protect			vm_protect			I I I I
+vm_map				vm_map				I A I I I I I I
+vm_read				vm_read				I I A I
+vm_write			vm_write			I I A I
+vm_msync			vm_msync			I I I
+vm_madvise			vm_madvise			I I I A
+vm_remap			vm_remap			I A I I I I I I
+vm_page_size			vm_page_size			I
+
+; Host
+host_info			host_info			I I A I
+host_processors		host_processors			I A I
+host_kernel_stats		host_kernel_stats		I A I
+
+; Clock
+clock_get_time			clock_get_time			I A
+clock_sleep			clock_sleep			I I I A I
+
+; Mach Ports
+mach_port_allocate		mach_port_allocate		I I I
+mach_port_deallocate		mach_port_deallocate		I I
+mach_port_insert_right		mach_port_insert_right		I I I I I
+mach_port_extract_right		mach_port_extract_right		I I I A I
+mach_port_mod_refs		mach_port_mod_refs		I I I I
+mach_port_get_refs		mach_port_get_refs		I I I I A
+mach_port_mutate		mach_port_mutate		I I I
+mach_port_construct		mach_port_construct		I A I A
+mach_port_destruct		mach_port_destruct		I I I
+
+; Mach Time
+mach_timebase_info		mach_timebase_info		A
+mach_wait_until			mach_wait_until			I
+mach_usable_response_time	mach_usable_response_time	I A A
+
+; Mach Bootstrap
+mach_bootstrap_register		mach_bootstrap_register		A I
+mach_bootstrap_check_in		mach_bootstrap_check_in		A
+mach_bootstrap_lookup		mach_bootstrap_lookup		A A
+mach_bootstrap_port		mach_bootstrap_port		A
+
+; Mach Semaphores
+semaphore_signal			semaphore_signal		I
+semaphore_signal_all		semaphore_signal_all		I
+semaphore_signal_thread		semaphore_signal_thread		I I
+semaphore_wait			semaphore_wait			I
+semaphore_wait_signal		semaphore_wait_signal		I I
+semaphore_timedwait		semaphore_timedwait		I I I
+
+; Mach Ledger
+ledger				ledger				I A I I I I
+ledger2				ledger2				I A I I I I I
+
+; Mach Voucher
+voucher_create			voucher_create			A I
+voucher_destroy			voucher_destroy			I
+voucher_apply			voucher_apply			I I
+
+; Mach Epoch
+mach_epoch_receive		mach_epoch_receive		I A
+
+; Shared Region
+shared_region_map_and_slide	shared_region_map_and_slide	I I I A I
+
+; === BSD System Calls (200-499) ===
+
+; Process
+exit				exit				I
+fork				fork				-
+execve				execve				A A A
+wait4				wait4				I A I I
+wait6				wait6				I A I I I A
+waitid				waitid				I I A I
+getpid				getpid				-
+getppid				getppid				-
+getuid				getuid				-
+geteuid				geteuid				-
+getgid				getgid				-
+getegid				getegid				-
+gettid				gettid				-
+issetugid			issetugid			-
+setuid				setuid				I
+seteuid				seteuid				I
+setgid				setgid				I
+setegid				setegid				I
+setreuid			setreuid			I I
+setregid			setregid			I I
+setresuid			setresuid			I I I
+getresuid			getresuid			A A A
+setresgid			setresgid			I I I
+getresgid			getresgid			A A A
+setlogin			setlogin			A
+getlogin			getlogin			A I
+setsid				setsid				-
+setpgid			setpgid				I I
+getpgrp				getpgrp				-
+getpgid			getpgid				I
+setpriority			setpriority			I I I
+getpriority			getpriority			I I
+getpriority			getpriority			I I
+nice				nice				I
+
+; File Operations
+read				read				I A I
+write				write				I A I
+open				open				A I I
+close				close				I
+readv				readv				I A I
+writev				writev				I A I
+pread				pread				I A I I
+pwrite				pwrite				I A I I
+preadv				preadv				I A I I
+pwritev				pwritev				I A I I
+lseek				lseek				I I I
+lseek				lseek				I I I
+llseek				llseek				I I I I
+fsync				fsync				I
+fdatasync			fdatasync			I
+truncate			truncate			A I
+ftruncate			ftruncate			I I
+flock				flock				I I
+mkfifo				mkfifo				A I
+mkdir				mkdir				A I
+rmdir				rmdir				A
+access				access				A I
+chmod				chmod				A I
+fchmod				fchmod				I I
+chown				chown				A I I
+fchown				fchown				I I I
+lchown				lchown				A I I
+umask				umask				I
+
+; File Info
+stat				stat				A A
+lstat				lstat				A A
+fstat				fstat				I A
+stat64				stat64				A A
+lstat64				lstat64				A A
+fstat64				fstat64				I A
+fstatfs				fstatfs				I A
+fstatfs64			fstatfs64			I A
+getfsstat			getfsstat			A I I
+getfsstat64			getfsstat64			A I I
+
+; File System
+chdir				chdir				A
+fchdir				fchdir				I
+chroot				chroot				A
+link				link				A A
+unlink				unlink				A
+symlink			symlink			A A
+readlink			readlink			A A I
+rename				rename				A A
+renameat			renameat			I A I A
+renamex_np			renamex_np			A A I
+copyfile			copyfile			A A I I
+mkfifoat			mkfifoat			I A I
+mknod				mknod				A I I
+
+; File Attributes
+getattrlist			getattrlist			A A A I I
+setattrlist			setattrlist			A A A I I
+getdirentriesattr		getdirentriesattr		I A I A I A I
+exchange				exchange			A A I
+fsctl				fsctl				A I A I
+sync				sync				-
+sync_file_range			sync_file_range		I I I I
+newfsctl			newfsctl			I I A I
+fs_get_path			fs_get_path			I A
+
+; Process Info
+proc_info			proc_info			I I I I I A I
+proc_info			proc_info			I I I I I A I
+proc_pidfdinfo			proc_pidfdinfo		I I I I A I
+proc_udf_info			proc_udf_info		I I A I
+
+; Memory
+mmap				mmap				A I I I I I
+munmap				munmap				A I
+mprotect			mprotect			A I I
+madvise				madvise				A I I I
+mincore				mincore				A I A
+mlock				mlock				A I
+munlock			munlock				A I
+mlockall			mlockall			I
+munlockall			munlockall			-
+
+; I/O Control
+ioctl				ioctl				I I A
+select				select				I A A A A
+pselect			pselect			I A A A A A
+kqueue				kqueue				-
+kevent				kevent				I A I A I A
+kevent64			kevent64			I A I A I A
+
+; Sockets
+socket				socket				I I I
+socketpair			socketpair			I I I A
+bind				bind				I A I
+listen				listen				I I
+accept				accept				I A A A
+accept4			accept4				I A A A I
+connect			connect				I A I
+shutdown			shutdown			I I
+recvfrom			recvfrom			I A I I A A
+recvmsg				recvmsg				I A I
+sendmsg				sendmsg				I A I
+sendto				sendto				I A I I A I
+recv				recv				I A I I
+send				send				I A I I
+recvfrom			recvfrom			I A I I A A
+
+; Pipe
+pipe				pipe				A
+pipe2				pipe2				A I
+writev				writev				I A I
+
+; Signals
+sigaction			sigaction			I A A
+sigaltstack			sigaltstack			A A
+sigwait				sigwait				A A
+sigwaitinfo			sigwaitinfo			A A
+sigtimedwait			sigtimedwait			A A I
+sigqueue			sigqueue			I I I A
+sigprocmask			sigprocmask			I A A
+sigsuspend			sigsuspend			A
+kill				kill				I I I
+
+; Time
+gettimeofday			gettimeofday			A A
+settimeofday			settimeofday			A A
+adjtime				adjtime				A A
+clock_getres			clock_getres			I A
+clock_gettime			clock_gettime			I A
+clock_settime			clock_settime			I A
+nanosecond			nanoseconds			I
+
+; Misc
+isatty				isatty				I
+uname				uname				A
+sysctl				sysctl				A I A A A
+sysctlbyname			sysctlbyname			A A I A A
+sysctlbyname			sysctlbyname			A A I A A
+getdtablesize			getdtablesize			-
+getrlimit			getrlimit			I A
+setrlimit			setrlimit			I A
+dup				dup				I
+dup2				dup2				I I
+dup3				dup3				I I I
+closefrom			closefrom			I
+close				close				I
+quota				quota				I
+getdirentries			getdirentries			I A I A
+getdirentries64		getdirentries64		I A I A A
+fcntl				fcntl				I I A
+Exchange				exchange				A A I
+
+; === Additional Darwin-specific syscalls (500+) ===
+
+; Process policy
+process_policy			process_policy			I I I I
+process_policy			process_policy			I I I I
+
+; Thread policy
+thread_policy			thread_policy			I I I I
+thread_policy_set			thread_policy_set		I I I I
+thread_policy_get			thread_policy_get		I I I I
+
+; Mach-specific
+mach袭				mach袭				I I
+
+; BSD extensions
+quotactl			quotactl			A I A I
+bsdthread_create		bsdthread_create		A A I A I A
+bsdthread_terminate		bsdthread_terminate		A I I
+bsdthread_register		bsdthread_register		A A I A A I I
+bsdthread_create		bsdthread_create		A A I A I A
+work_interval_create		work_interval_create	I A I
+work_interval_destroy		work_interval_destroy	I
+work_interval_join		work_interval_join		I
+work_interval_notify		work_interval_notify	I I A I
+
+; XNU kernel cache
+kernel_gateway			kernel_gateway			A
+shared_region_region		shared_region_region		I I A I
+
+; System reservation
+system_override		system_override			I I
+reserved_port			reserved_port			I I A
+reserve_memory			reserve_memory			A I I I I A
+release_reserved_memory	release_reserved_memory	I

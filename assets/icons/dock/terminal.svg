@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <!-- Terminal icon - Command line prompt -->
+  <rect x="1" y="2" width="14" height="12" rx="1.5" fill="#333333"/>
+  <rect x="2" y="3" width="12" height="10" fill="#1a1a1a"/>
+  <text x="3" y="10" font-family="monospace" font-size="8" fill="#00FF00">&gt;</text>
+  <text x="7" y="10" font-family="monospace" font-size="8" fill="#00FF00">_</text>
+</svg>

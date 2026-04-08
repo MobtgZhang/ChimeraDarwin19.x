@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <!-- AppStore icon - Building -->
+  <rect x="2" y="2" width="12" height="12" rx="2" fill="#3498DB"/>
+  <polygon points="8,4 2,9 14,9" fill="white"/>
+  <rect x="4" y="9" width="2" height="3" fill="white"/>
+  <rect x="7" y="9" width="2" height="3" fill="white"/>
+  <rect x="10" y="9" width="2" height="3" fill="white"/>
+</svg>

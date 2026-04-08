@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <!-- Safari icon - Compass -->
+  <circle cx="8" cy="8" r="6" fill="none" stroke="#3498DB" stroke-width="1.5"/>
+  <circle cx="8" cy="8" r="1" fill="#3498DB"/>
+  <polygon points="8,3 10,8 8,8 6,8" fill="#E74C3C"/>
+  <polygon points="8,13 6,8 8,8 10,8" fill="#333333"/>
+  <text x="8" y="2" text-anchor="middle" font-size="2" fill="#333333">N</text>
+</svg>

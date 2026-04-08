@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <!-- Logo icon - Hexagon -->
+  <polygon points="8,1 14,4.5 14,11.5 8,15 2,11.5 2,4.5" fill="#3498DB" stroke="#2980B9" stroke-width="0.5"/>
+  <polygon points="8,4 11,7 8,12 5,7" fill="white" opacity="0.9"/>
+  <circle cx="8" cy="7.5" r="1" fill="#E74C3C"/>
+</svg>

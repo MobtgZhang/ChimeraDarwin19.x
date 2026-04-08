@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <!-- Window menu icon -->
+  <rect x="2" y="3" width="12" height="10" rx="1" fill="none" stroke="#333333" stroke-width="1.5"/>
+  <line x1="2" y1="6" x2="14" y2="6" stroke="#333333" stroke-width="1"/>
+  <circle cx="4" cy="4.5" r="0.8" fill="#E74C3C"/>
+  <circle cx="6" cy="4.5" r="0.8" fill="#F1C40F"/>
+  <circle cx="8" cy="4.5" r="0.8" fill="#2ECC71"/>
+</svg>

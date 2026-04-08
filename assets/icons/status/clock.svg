@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8">
+  <!-- Clock Icon - 时钟 -->
+  <circle cx="4" cy="4" r="3" fill="none" stroke="#333" stroke-width="0.8"/>
+  <line x1="4" y1="4" x2="4" y2="2" stroke="#333" stroke-width="0.8" stroke-linecap="round"/>
+  <line x1="4" y1="4" x2="6" y2="4" stroke="#333" stroke-width="0.8" stroke-linecap="round"/>
+  <circle cx="4" cy="4" r="0.4" fill="#333"/>
+</svg>
